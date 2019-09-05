@@ -1,0 +1,44 @@
+
+
+body{
+  font-size: 16px;
+}
+h1{
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  font-size: 4.0em;
+
+    }
+
+.art{
+    margin:auto;
+    border-spacing: 10px;
+    }
+
+td{
+  width: 100px;
+  height: 400px;
+  border: 6px solid black;
+
+
+}
+
+#one{
+  background-color: #011627
+}
+
+#two{
+  background-color: #FF9F1D
+}
+
+#three{
+  background-color: #2EC4B6
+}
+
+#four{
+  background-color: #E71D36
+}
+
+#five{
+  background-color: #FF9F1C
+}

@@ -1,0 +1,12 @@
+li{
+  color: rgba(120, 0, 0, 0.5);
+}
+
+.top_items{
+  color: rgba(255, 0, 0, 0.5);
+}
+
+#two{
+    color: black;
+    border: 3px solid black;
+}

@@ -1,0 +1,20 @@
+body{
+  background: url(https://www.atlasandboots.com/wp-content/uploads/2019/05/feat-image-1-most-beautiful-mountains-in-the-world.jpg);
+  background-repeat:no-repeat;
+}
+
+div{
+  background-color: blue;
+  border-color: red;
+  border-width: 5px;
+  border-style: dashed;
+}
+
+p{
+  color: yellow;
+}
+
+span{
+  background: red;
+  color: black;
+}
