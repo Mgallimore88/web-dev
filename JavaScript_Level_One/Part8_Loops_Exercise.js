@@ -13,9 +13,17 @@
 // Do this with a While Loop and a For Loop
 
 // While Loop
+var i = 0;
+while (i < 5) {
+  console.log("hello");
+  i++
+}
 
 
 // For Loop
+for (var i = 0; i < 5; i++) {
+  console.log("Hello");
+}
 
 
 
@@ -29,7 +37,17 @@
 
 // METHOD ONE
 // While Loop
+console.log("odd numbers:");
+num = 1
+while (num < 26) {
+  console.log(num);
+  num += 2;
+}
 
 
 // METHOD TWO
 // For Loop
+console.log("for loop odds");
+for (var i = 1; i < 26; i += 2) {
+  console.log(i);
+}
