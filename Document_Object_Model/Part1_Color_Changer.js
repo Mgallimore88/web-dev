@@ -18,20 +18,20 @@ header.style.color = 'red'
 // Random Color Function:
 
 // http://stackoverflow.com/questions/1484506/random-color-generator-in-javascript
-function getRandomColor(){
+function getRandomColor() {
   var letters = "0123456789ABCDEF";
   var color = '#';
   for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random()*16)];
+    color += letters[Math.floor(Math.random() * 16)];
   }
   return color
 }
 
 // Simple function for clarity
-function changeHeaderColor(){
+function changeHeaderColor() {
   colorInput = getRandomColor()
   header.style.color = colorInput;
 }
 
 // Now perform the action over intervals (milliseocnds):
-setInterval("changeHeaderColor()",500);
+setInterval("changeHeaderColor()", 10000);
