@@ -5,10 +5,14 @@
 //////////////////
 
 // Given the object:
-var employee = {
+var employee1 = {
   name: "John Smith",
   job: "Programmer",
-  age: 31
+  age: 31,
+  nameLength: function() {
+    console.log(this.name.length);
+
+  }
 }
 
 // Add a method called nameLength that prints out the
@@ -20,10 +24,19 @@ var employee = {
 /////////////////
 
 // Given the object:
-var employee = {
+var employee2 = {
   name: "John Smith",
   job: "Programmer",
-  age: 31
+  age: 31,
+  alert: function() {
+    for (var k in employee2) {
+      if (k == "alert") {
+        return;
+      } else {
+        alert(k + ": " + employee2[k]);
+      }
+    }
+  }
 }
 
 // Write program that will create an Alert in the browser of each of the
@@ -38,10 +51,13 @@ var employee = {
 /////////////////
 
 // Given the object:
-var employee = {
+var employee3 = {
   name: "John Smith",
   job: "Programmer",
-  age: 31
+  age: 31,
+  lastName: function() {
+    console.log((this.name.split(" ")[1]))
+  }
 }
 
 // Add a method called lastName that prints
