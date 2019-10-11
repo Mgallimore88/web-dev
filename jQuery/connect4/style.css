@@ -12,7 +12,7 @@
 }
 
 /* this is descendant selector - .button descended from .board is selected. does not have to be direct child. */
-.board .button {
+.button {
   background-color: rgb(200, 200, 200);
   border: black solid 2px;
   border-radius: 50%;
@@ -21,11 +21,27 @@
   margin: 5px;
 }
 
-.board .turnYellow {
+.playerOneDemo {
+  border: black solid 2px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+.playerTwoDemo {
+  border: black solid 2px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+.turnYellow {
   background: rgb(255, 255, 0)
 }
 
 /* Specificity rules mean the more explicitly you declare the item the more likely it is to be selected. Here two classes are worth the same amount but the last one declared wins.  */
-.board .turnRed {
+.turnRed {
   background: rgb(255, 0, 0);
 }
