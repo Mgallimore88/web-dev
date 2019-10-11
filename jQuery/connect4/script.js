@@ -50,5 +50,64 @@ buttons.on('click', function(event) {
   } else {
     buttons.eq(buttonIndex).toggleClass('turnYellow');
   }
+  checkWin();
   changePlayer();
 })
+
+function checkWin() {
+  checkHorizontals();
+  checkVerticals();
+  checkDiagonals();
+}
+
+function checkHorizontals() {
+  console.log("check horizontals");
+  var grey = "rgb(200, 200, 200)"
+  var previousColour = null;
+  //of all the buttons
+  for (var row = 5; row > -1; row--) {
+    var runningTotal = 0;
+    for (var column = 0; column < 7; column++) {
+      colour = getColour(row, column);
+      console.log(colour);
+      if ((colour === previousColour)) {
+        runningTotal += 1;
+      } else {
+        runningTotal = 0;
+      }
+      previousColour = colour;
+      if (runningTotal === 4) {
+        console.log("4 in a row! Horizontal");
+      }
+    }
+  }
+
+
+}
+
+function checkVerticals() {
+  console.log("check verticals");
+  // var grey = "rgb(200, 200, 200)"
+  // var previousColour = null;
+  // //of all the buttons
+  // for (var column = 0; column < 7; column++) {
+  //   var runningTotal = 0;
+  //   for (var row = 5; row > -1; row--) {
+  //     colour = getColour(row, column);
+  //     console.log(colour);
+  //     if ((colour === previousColour)) {
+  //       runningTotal += 1;
+  //     } else {
+  //       runningTotal = 0;
+  //     }
+  //     previousColour = colour;
+  //     if (runningTotal === 4) {
+  //       console.log("4 in a row! Vertical");
+  //     }
+  //   }
+  // }
+}
+
+function checkDiagonals() {
+  console.log("check diagonals");
+}
