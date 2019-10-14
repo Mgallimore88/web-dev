@@ -24,13 +24,13 @@
 # The construction of a tuples use () with elements separated by commas. For example:
 
 # Can create a tuple with mixed types
-t = (1,2,3)
+t = (1, 2, 3)
 
 # Check len just like a list
 len(t)
 
 # Can also mix object types
-t = ('one',2)
+t = ("one", 2)
 
 # Show
 t
@@ -49,10 +49,10 @@ t[-1]
 # Lets look at two of them:
 
 # Use .index to enter a value and return the index
-t.index('one')
+t.index("one")
 
 # Use .count to count the number of times a value appears
-t.count('one')
+t.count("one")
 
 ####################
 ### Immutability ###
@@ -61,12 +61,12 @@ t.count('one')
 # It can't be stressed enough that tuples are immutable.
 # To drive that point home:
 
-t[0]= 'change'
+t[0] = "change"
 
 # Because of this immutability, tuples can't grow.
 # Once a tuple is made we can not add to it.
 
-t.append('nope')
+t.append("nope")
 
 ############################
 ### When to use Tuples #####
@@ -102,7 +102,7 @@ x = set()
 # We add to sets with the add() method
 x.add(1)
 
-#Show
+# Show
 x
 
 
@@ -115,13 +115,13 @@ x
 # Add a different element
 x.add(2)
 
-#Show
+# Show
 x
 
 # Try to add the same element
 x.add(1)
 
-#Show
+# Show
 x
 
 
@@ -130,7 +130,7 @@ x
 # elements to a set to get the unique elements. For example:
 
 # Create a list with repeats
-l = [1,1,2,2,3,4,5,6,1,1]
+l = [1, 1, 2, 2, 3, 4, 5, 6, 1, 1]
 
 # Cast as set to get unique values
 set(l)
@@ -146,7 +146,7 @@ set(l)
 # Set object to be a boolean
 a = True
 
-#Show
+# Show
 a
 
 

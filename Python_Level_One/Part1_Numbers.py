@@ -18,7 +18,7 @@
 #
 # Integers are just whole numbers, positive or negative. For example: 2 and -2 are
 #  examples of integers.
-# 
+#
 # Floating point numbers in Python are notable because they have a decimal point
 # in them, or use an exponential (e) to define the number. For example 2.0 and -2.1
 # are examples of floating point numbers. 4E2 (4 times 10 to the power of 2) is
@@ -32,29 +32,29 @@
 
 # Basic Arithmetic
 # Addition
-2+1
+2 + 1
 
 # Subtraction
-2-1
+2 - 1
 
 # Multiplication
-2*2
+2 * 2
 
 
 # Division
-3/2
+3 / 2
 
 # Powers
-2**3
+2 ** 3
 
 # Can also do roots this way
-4**0.5
+4 ** 0.5
 
 # Order of Operations followed in Python
 2 + 10 * 10 + 3
 
 # Can use parenthesis to specify orders
-(2+10) * (10+3)
+(2 + 10) * (10 + 3)
 
 
 ## Variable Assignments
@@ -72,7 +72,7 @@ a = 5
 # Now if I call a in my Python script, Python will treat it as the number 5.
 
 # Adding the objects
-a+a
+a + a
 
 # What happens on reassignment? Will Python let us write it over?
 
@@ -111,7 +111,7 @@ my_income = 100
 
 tax_rate = 0.1
 
-my_taxes = my_income*tax_rate
+my_taxes = my_income * tax_rate
 
 # Show my taxes!
 my_taxes

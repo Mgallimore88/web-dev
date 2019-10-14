@@ -21,12 +21,13 @@
 # arrayCheck([1, 1, 2, 4, 1]) → False
 # arrayCheck([1, 1, 2, 1, 2, 3]) → True
 
+
 def arrayCheck(nums):
 
     # Note: iterate with length-2, so can use i+1 and i+2 in the loop
-    for i in range(len(nums)-2):
+    for i in range(len(nums) - 2):
         # Check in sets of 3 if we have 1,2,3 in a row
-        if nums[i]==1 and nums[i+1]==2 and nums[i+2]==3:
+        if nums[i] == 1 and nums[i + 1] == 2 and nums[i + 2] == 3:
             return True
     return False
 
@@ -44,16 +45,17 @@ def arrayCheck(nums):
 # stringBits('Hi') → 'H'
 # stringBits('Heeololeo') → 'Hello'
 
-def stringBits(str):
-  result = ""
-  # Many ways to do this.
 
-  # This uses the standard loop of i on every char,
-  # and inside the loop skips the odd index values.
-  for i in range(len(str)):
-    if i % 2 == 0:
-      result = result + str[i]
-  return result
+def stringBits(str):
+    result = ""
+    # Many ways to do this.
+
+    # This uses the standard loop of i on every char,
+    # and inside the loop skips the odd index values.
+    for i in range(len(str)):
+        if i % 2 == 0:
+            result = result + str[i]
+    return result
 
 
 #####################
@@ -74,13 +76,14 @@ def stringBits(str):
 
 
 def end_other(a, b):
-  a = a.lower()
-  b = b.lower()
+    a = a.lower()
+    b = b.lower()
 
-  # Optional use of endswith() method
-  #return (b.endswith(a) or a.endswith(b))
+    # Optional use of endswith() method
+    # return (b.endswith(a) or a.endswith(b))
 
-  return a[-(len(b)):] == b or a == b[-(len(a)):]
+    return a[-(len(b)) :] == b or a == b[-(len(a)) :]
+
 
 #####################
 ## -- PROBLEM 4 -- ##
@@ -93,11 +96,12 @@ def end_other(a, b):
 # doubleChar('AAbb') → 'AAAAbbbb'
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
+
 def doubleChar(str):
-  result = ''
-  for char in str:
-    result += char * 2
-  return result
+    result = ""
+    for char in str:
+        result += char * 2
+    return result
 
 
 #####################
@@ -121,15 +125,18 @@ def doubleChar(str):
 # no_teen_sum(2, 13, 1) → 3
 # no_teen_sum(2, 1, 14) → 3
 
+
 def no_teen_sum(a, b, c):
-  return fix_teen(a) + fix_teen(b) + fix_teen(c)
+    return fix_teen(a) + fix_teen(b) + fix_teen(c)
+
 
 def fix_teen(n):
-  # another way without the "in" operator
-  #if 13 <= n <= 14 or 17 <= n <= 19:
-  if n in [13, 14, 17, 18, 19]:
-    return 0
-  return n
+    # another way without the "in" operator
+    # if 13 <= n <= 14 or 17 <= n <= 19:
+    if n in [13, 14, 17, 18, 19]:
+        return 0
+    return n
+
 
 #####################
 ## -- PROBLEM 6 -- ##
@@ -143,9 +150,10 @@ def fix_teen(n):
 # count_evens([2, 2, 0]) → 3
 # count_evens([1, 3, 5]) → 0
 
+
 def count_evens(nums):
-  count = 0
-  for element in nums:
-    if element % 2 == 0:
-      count += 1
-  return count
+    count = 0
+    for element in nums:
+        if element % 2 == 0:
+            count += 1
+    return count

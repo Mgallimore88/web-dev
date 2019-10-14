@@ -23,6 +23,7 @@
 
 # Try to figure out what this code is doing and how it might be useful to you
 import random
+
 digits = list(range(10))
 random.shuffle(digits)
 print(digits[:3])

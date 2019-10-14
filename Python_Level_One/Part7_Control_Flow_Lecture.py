@@ -21,7 +21,7 @@
 # Equality
 1 == 1
 1 == "1"
-'hi' == 'bye'
+"hi" == "bye"
 # Inequality
 1 != 2
 
@@ -52,36 +52,36 @@
 # Now let's show some examples of if, elif, and else statements:
 
 if 1 < 2:
-    print('Yep!')
+    print("Yep!")
 
 if 1 < 2:
-    print('yep!')
+    print("yep!")
 
 
 # If Else - Make sure to line up the else with the if statement to "connect" them
 
 if 1 < 2:
-    print('first')
+    print("first")
 else:
-    print('last')
+    print("last")
 
 ###
 ###
 
 if 1 > 2:
-    print('first')
+    print("first")
 else:
-    print('last')
+    print("last")
 
 
 # To add more conditions (like else if) you just use a single phrase "elif"
 
 if 1 == 2:
-    print('first')
+    print("first")
 elif 3 == 3:
-    print('middle')
+    print("middle")
 else:
-    print('Last')
+    print("Last")
 
 ################################################################################
 ####################-----------------------------###############################
@@ -107,7 +107,7 @@ else:
 ## For Loop with a list
 
 # Perform an action with each element
-seq = [1,2,3,4,5]
+seq = [1, 2, 3, 4, 5]
 
 for item in seq:
     print(item)
@@ -115,15 +115,15 @@ for item in seq:
 
 # Perform an action for every element but doesn't actually involve the elements
 for item in seq:
-    print('Yep')
+    print("Yep")
 
 
 # You can call the loop variable whatever you want:
 for jelly in seq:
-    print(jelly+jelly)
+    print(jelly + jelly)
 
 ## For Loop with a Dictionary
-ages = {"Sam":3,"Frank":4,"Dan":29}
+ages = {"Sam": 3, "Frank": 4, "Dan": 29}
 
 for key in ages:
     print("This is the key")
@@ -135,14 +135,14 @@ for key in ages:
 # A list of tuple pairs is a very common format for functions to return data in
 # Because it is so common we can use tuple un-packing to deal with this, example:
 
-mypairs = [(1,10),(3,30),(5,50)]
+mypairs = [(1, 10), (3, 30), (5, 50)]
 
 # Normal
 for tup in mypairs:
     print(tup)
 
 # Tuple un-packing
-for item1,item2 in mypairs:
+for item1, item2 in mypairs:
     print(item1)
     print(item2)
 
@@ -155,8 +155,8 @@ for item1,item2 in mypairs:
 
 i = 1
 while i < 5:
-    print('i is: {}'.format(i))
-    i = i+1
+    print("i is: {}".format(i))
+    i = i + 1
 
 #####################
 ### OTHER TOPICS ####
@@ -174,10 +174,10 @@ for i in range(5):
     print(i)
 
 # Start and ending
-range(1,10)
+range(1, 10)
 
 # Third argument for step-size
-range(0,10,2)
+range(0, 10, 2)
 
 
 # List Comprehension
@@ -185,17 +185,17 @@ range(0,10,2)
 # You can think of this as deconstructing a for loop with an append(). For Example:
 
 # Starting with:
-x = [1,2,3,4]
+x = [1, 2, 3, 4]
 
 # We could do this:
 out = []
 for item in x:
-    out.append(item**2)
+    out.append(item ** 2)
 print(out)
 
 
 # Written in List Comprehension Form
-[item**2 for item in x]
+[item ** 2 for item in x]
 
 # List Comprehension is a great tool, but remember its not always approriate for
 # every situation, don't sacrafice readability for a list Comprehension. It's
