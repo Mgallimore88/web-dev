@@ -72,7 +72,7 @@ class Hand:
         [self.cards.insert(0, x) for x in cards]
 
     def draw(self):
-        return self.cards.pop()
+        return self.cards.pop(-1)
 
 
 class Player:
@@ -104,7 +104,8 @@ class Player:
             deck.played_cards.append(self.active_card)
         elif number_of_cards == 3:
             war_cards = [self.hand.draw() for n in range(number_of_cards)]
-            [deck.played_cards.append(war_cards for n in range(number_of_cards))]
+            for card in war_cards:
+                deck.played_cards.append(card)
 
 
 
@@ -140,9 +141,12 @@ player_two = Player("Tom", hand_two)
 
 #  GAME
 game_on = True
+
 while game_on:
     print("player one active card " + str(player_one.active_card) )
     print("player two active card " + str(player_two.active_card) )
+    print(player_one.hand.cards)
+    print(player_two.hand.cards)
 
     start_turn = input()
     player_one.play_card(1)
