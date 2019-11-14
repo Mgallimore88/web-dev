@@ -103,6 +103,9 @@ class Player:
             self.active_card = self.hand.draw()
             deck.played_cards.append(self.active_card)
         elif number_of_cards == 3:
+            if len(self.hand) < number_of_cards :
+                number_of_cards = len(self.hand)
+            print(f"TEST there are {number_of_cards} war cards")
             war_cards = [self.hand.draw() for n in range(number_of_cards)]
             for card in war_cards:
                 deck.played_cards.append(card)
@@ -125,6 +128,15 @@ def rank(card):
     else:
         return "Not a valid rank"
 
+def empty_hand():
+    if len(player_one.hand) == 0:
+        return True
+    elif len(player_two.hand) == 0:
+        return True
+    else:
+        return False
+
+
 ######################
 #### GAME PLAY #######
 ######################
@@ -138,6 +150,7 @@ hand_one = Hand(deck.first_half)
 hand_two = Hand(deck.second_half)
 player_one = Player("Mike", hand_one)
 player_two = Player("Tom", hand_two)
+
 
 #  GAME
 game_on = True
@@ -179,6 +192,11 @@ while game_on:
                 war = False
             else:
                 print("draw another")
+    if empty_hand():
+        game_on = False
+        break
+
+print("Game over!")
 
 
 
