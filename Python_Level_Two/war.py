@@ -95,21 +95,22 @@ class Player:
             return True
 
     def pickup(self):
-        [self.hand.cards.insert(0,x) for x in deck.played_cards]
+        [self.hand.cards.insert(0, x) for x in deck.played_cards]
         deck.played_cards = []
 
     def play_card(self, number_of_cards):
         if number_of_cards == 1:
             self.active_card = self.hand.draw()
             deck.played_cards.append(self.active_card)
+            print(f"Cards on the table:{deck.played_cards}")
+
         elif number_of_cards == 3:
-            if len(self.hand) < number_of_cards :
+            if len(self.hand) < number_of_cards:
                 number_of_cards = len(self.hand)
-            print(f"TEST there are {number_of_cards} war cards")
             war_cards = [self.hand.draw() for n in range(number_of_cards)]
             for card in war_cards:
                 deck.played_cards.append(card)
-
+                print(f"Cards on the table:{deck.played_cards}")
 
 
 # base level functions
@@ -127,6 +128,7 @@ def rank(card):
         return 14
     else:
         return "Not a valid rank"
+
 
 def empty_hand():
     if len(player_one.hand) == 0:
@@ -156,10 +158,8 @@ player_two = Player("Tom", hand_two)
 game_on = True
 
 while game_on:
-    print("player one active card " + str(player_one.active_card) )
-    print("player two active card " + str(player_two.active_card) )
-    print(player_one.hand.cards)
-    print(player_two.hand.cards)
+    print("player one played " + str(player_one.active_card))
+    print("player two played " + str(player_two.active_card))
 
     start_turn = input()
     player_one.play_card(1)
@@ -197,6 +197,3 @@ while game_on:
         break
 
 print("Game over!")
-
-
-
