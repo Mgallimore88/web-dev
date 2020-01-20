@@ -2,7 +2,7 @@
 ### WELCOME TO YOUR OOP PROJECT #####
 #####################################
 
-# For this project I used OOP to create a card game. This card game is the card game "War" 
+# For this project I used OOP to create a card game. This card game is the card game "War"
 # for two players, you an the computer. If you don't know
 # how to play "War" here are the basic rules:
 #
@@ -42,16 +42,13 @@ class Deck:
         self.cards = [(s, r) for s in suits for r in ranks]
         self.played_cards = []
         print(self.cards)
-        # for suit in suits:
-        #     for rank in ranks:
-        #         self.cards.append(str(suit + rank))
 
     def shuffle(self):
         shuffle(self.cards)
 
     def split(self):
-        self.first_half = self.cards[: int(len(self.cards) / 2)]
-        self.second_half = self.cards[int(len(self.cards) / 2) :]
+        self.first_half = self.cards[:26]
+        self.second_half = self.cards[26:]
 
 
 class Hand:
@@ -66,7 +63,7 @@ class Hand:
     def __len__(self):
         return len(self.cards)
 
-    def add(self, cards):
+    def add(self, added_cards):
         [self.cards.insert(0, x) for x in cards]
 
     def draw(self):

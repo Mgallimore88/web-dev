@@ -20,7 +20,12 @@ from first_app import views
 from first_app import urls
 
 urlpatterns = [
+    # direct here, hit up index
     path('',views.index,name='index'),
+    # The include() function allows referencing other URLconfs. 
+    # Whenever Django encounters include(), 
+    # it chops off whatever part of the URL matched up to that point 
+    # and sends the remaining string to the included URLconf for further processing. 
     path('first_app/', include('first_app.urls')),
     path('admin/', admin.site.urls)
 ]
