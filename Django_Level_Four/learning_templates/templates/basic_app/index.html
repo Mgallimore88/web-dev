@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index</title>
-</head>
-<body>
-    <h1>Welcome to index</h1>
-    
-</body>
-</html>
+{% extends "basic_app/base.html" %}
+    {% block body_block %}
+        <h1>Welcome to index</h1>
+        <h1> {{ text|cut:'world' }} </h1>
+        <h1> {{ number|add:"99" }} </h1>
+    {% endblock %}
+
