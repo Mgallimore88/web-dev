@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from app_2.models import User
+from app_2.forms import NewUserForm
+# from django.http import HttpResponse
+# from app_2.models import User
 
 # Create your views here.
 def index(request):
@@ -11,6 +12,15 @@ def help(request):
     return render(request, 'app_2/help.html', context=helpdict)
 
 def users(request):
-    user_list = User.objects.order_by('first_name')
-    user_dict = {'users':user_list}
-    return render(request, 'app_2/users.html', context=user_dict)
+
+    form = NewUserForm()
+
+    if request.method == 'POST':
+        form = NewUserForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+            return index(request)
+    else:
+        print("Error in form")
+
+    return render(request, 'app_2/users.html', {'form': form})
