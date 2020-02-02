@@ -14,12 +14,12 @@
 </div>
 
 
-    <form action="" method="post">
+    <form method="POST">
     <div class='form-group'>
         <table class='form-group'>
-            {{ userform }}
+            {{ userform.as_p }}
             {% csrf_token %}
-            <button type="button">submit</button>
+            <input type="submit" class="btn btn-primary" value = "Submit!"></button>
         </table>
     </div>
     </form>

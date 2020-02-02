@@ -5,5 +5,5 @@ from app_2 import views
 urlpatterns = [
     path('help/', views.help, name='help'),
     path('userform/', views.adduser, name='adduser'),
-    path('', views.users, name='users')
+    path('users/', views.users, name='users')
 ]

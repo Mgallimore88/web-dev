@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from app_2.models import User
 from app_2.forms import UserForm
 
@@ -17,16 +16,20 @@ def users(request):
     return render(request, 'app_2/users.html', context=user_dict)
 
 def adduser(request):
-    user_form = UserForm
+    user_form = UserForm()
     user_form_dict = {'userform': user_form}
     if request.method=='POST':
         print("hi")
         # Create a form instance from POST data
-        u = UserForm(request.POST)
+        user_form = UserForm(request.POST)
 
-        # Save a new User object from the form's data
-        new_user = u.save()
-        return render(request, 'app_2/index.html', context=user_form_dict)
+        if user_form.is_valid():
+            # Save a new User object from the form's data
+            user_form.save(commit=True)
+            return users(request)
+        else:
+            print('error invalid form')
+
 
 
 
