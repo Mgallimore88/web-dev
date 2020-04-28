@@ -5,13 +5,35 @@
     <h1>Please Login</h1>
     <form action="{% url 'basic_app:user_login' %}" method="post">
         {% csrf_token %}
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="username" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id='password' name="password" class="form-control" placeholder="Password">
+            </div>
+
+            <button type="submit" value="Login" class="btn btn-primary">Submit</button>
+          </form>
+
+
+
+        
+        <!-- <li>
         <label for="username">Username:</label>
         <input type="text" name=username placeholder="Enter Username">
+        </li>
 
+        <li>
         <label for="password">Password:</label>
         <input type="password" name="password">
+        </li> -->
 
-        <input type="submit" value="Login">
+        <!-- <input type="submit" value="Login"> -->
     </form>
 
 </div>
